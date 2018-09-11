@@ -2,22 +2,18 @@
   <div>
     <Header />
 
+    <h3>His own Users page layout title</h3>
+
     <nuxt/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import AppLogo from '@/components/AppLogo.vue'
 
 export default {
   components: {
-    Header,
-    AppLogo
+    Header
   }
 }
 </script>
-
-<style>
-</style>
-

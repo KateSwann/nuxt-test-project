@@ -1,5 +1,10 @@
 <template>
-	<h1>Users</h1>
-
+    <p>please enter an ID and click the button</p>
 </template>
+
+<script>
+export default {
+    layout: 'users'
+}
+</script>
 
