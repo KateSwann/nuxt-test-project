@@ -1,20 +1,43 @@
 <template>
   <section class="container">
     <nuxt-link to="/users">Users</nuxt-link>
-    <p id="demo" onclick="myFunction()">Click me to change my text color.</p>
 
-    <div class="yamap" id="ymaps">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A519cec2f984af94a5183fc2b7ccb23aee7b2531f0183ea0056f6719289446201&amp;width=100%&amp;lang=ru_RU&amp;scroll=true"></script>
-    </div>
+    <map-loader 
+      :map-config="mapConfig"
+      apiKey="AIzaSyCdsCZwgVbKBnvwqtPQ8Mqcv5P0lNzuxs8"
+    >
+      <template v-for="marker in markers">
+        <child-marker :position="marker" />
+      </template>
+    </map-loader>
+
+
   </section>
 </template>
 
 
 <script>
-function myFunction() {
-    document.getElementById("demo").style.color = "red";
+import MapLoader from "./MapLoader.vue"
+import ChildMarker from './ChildMarker'
+
+export default {
+  props: {
+    markers: Array
+  },
+  data(){
+    return {
+      mapConfig: {
+        zoom: 12
+      }
+    }
+  },
+  components: {
+    MapLoader,
+    ChildMarker
+  }
 }
 </script>
+
 
 
 <style>

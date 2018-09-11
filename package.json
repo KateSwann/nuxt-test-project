@@ -13,7 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "google-maps-api-loader": "^1.1.1",
+    "nuxt": "^1.0.0",
+    "vue-yandex-maps": "^0.7.15"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
