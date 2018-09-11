@@ -1,10 +1,27 @@
 <template>
   <section class="container">
     <nuxt-link to="/users">Users</nuxt-link>
+    <p id="demo" onclick="myFunction()">Click me to change my text color.</p>
+
+    <div class="yamap" id="ymaps">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A519cec2f984af94a5183fc2b7ccb23aee7b2531f0183ea0056f6719289446201&amp;width=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
   </section>
 </template>
 
+
+<script>
+function myFunction() {
+    document.getElementById("demo").style.color = "red";
+}
+</script>
+
+
 <style>
+.yamap {
+  height: 80vh;
+}
+
 .container {
   text-align: center;
 }
